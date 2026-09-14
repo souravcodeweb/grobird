@@ -35,7 +35,7 @@ export default function Home() {
           </nav>
 
           <div className="flex flex-1 items-center justify-end">
-            <button className="h-[48px] min-w-[130px] rounded-[10px] border-0 bg-black px-4 text-[16px] font-medium text-white shadow-sm transition hover:bg-black/85">
+            <button className="h-[48px] min-w-[130px] rounded-none border-0 bg-black px-4 text-[16px] font-medium text-white shadow-sm transition hover:bg-black/85">
               Contact us
             </button>
           </div>
