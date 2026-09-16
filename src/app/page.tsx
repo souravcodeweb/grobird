@@ -201,7 +201,7 @@ export default function Home() {
           <div className="mx-auto flex h-[95%] max-w-[1600px]">
             <div className="flex w-1/2 items-center bg-[#010C1B] px-[25px]">
               <div className="flex flex-col items-start">
-                <h1 className="font-[var(--font-sora)] text-[65.6px] font-normal leading-[1.05] tracking-[-0.04em] text-white">
+                <h1 className="font-[family-name:var(--font-sora)] text-[65.6px] font-normal leading-[1.05] tracking-[-0.04em] text-white">
                   <span className="block text-[#827E7E]">Operational</span>
                   <span className="block text-[#827E7E]">
                     Bottlenecks Don&apos;t Get
@@ -268,7 +268,7 @@ export default function Home() {
           aria-label="Blank section"
         >
           <div className="mx-auto grid w-full max-w-[1600px] grid-cols-2 items-start gap-x-[72px]">
-            <p className="text-left text-[57px] font-[400] leading-[1.2] tracking-[-0.04em] text-white">
+            <p className="text-left text-[57px] font-[weight:400] leading-[1.2] tracking-[-0.04em] text-white">
               <span className="block text-[#858382]">Knowing the</span>
               <span className="block">
                 <span className="text-[#858382]">problem</span>
@@ -339,11 +339,11 @@ export default function Home() {
               aria-label="Testimonial action"
               className="h-[40px] w-[595.67px] border border-[#3B3B3B] bg-transparent pl-[12px] text-left text-[16px] text-[#E9E7E7]"
             >
-              <span className="text-[15.6px] font-[500] text-[#A9A9A9]">
+              <span className="text-[15.6px] font-[weight:500] text-[#A9A9A9]">
                 Vaibhav
               </span>{" "}
               |{" "}
-              <span className="text-[15.6px] font-[500] text-[#FFFFFF]">
+              <span className="text-[15.6px] font-[weight:500] text-[#FFFFFF]">
                 Co-founder Presalesforce.ai
               </span>
             </button>
@@ -356,11 +356,11 @@ export default function Home() {
           aria-label="New section"
         >
           <div className="flex flex-col items-center text-center">
-            <h2 className="font-[var(--font-sora)] text-[57.4px] font-[400] leading-[1.2] tracking-[-0.04em]">
+            <h2 className="font-[family-name:var(--font-sora)] text-[57.4px] font-[weight:400] leading-[1.2] tracking-[-0.04em]">
               <span className="text-[#858382]">What We</span>{" "}
               <span className="text-[#FF884C]">Do</span>
             </h2>
-            <p className="mt-6 translate-y-4 max-w-[900px] text-[16px] font-[400] leading-[1.6] text-[#FFFFFF]">
+            <p className="mt-6 translate-y-4 max-w-[900px] text-[16px] font-[weight:400] leading-[1.6] text-[#FFFFFF]">
               <span className="whitespace-nowrap">
                 Operating at scale requires systems. But most platforms are
                 built for generic companies, not yours.
@@ -375,16 +375,16 @@ export default function Home() {
               <div className="group h-[561.55px] w-[413.33px] shrink-0 [perspective:1000px]">
                 <div className="relative h-full w-full rounded-[24px] transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                   <div className="absolute inset-0 flex flex-col justify-end rounded-[24px] bg-[#FF884C] pb-[8px] pl-[15px] [backface-visibility:hidden]">
-                    <span className="-translate-y-[25px] text-left text-[22px] font-[600] leading-[1.2] tracking-[-0.03em] text-[#FFFFFF]">
+                    <span className="-translate-y-[25px] text-left text-[22px] font-[weight:600] leading-[1.2] tracking-[-0.03em] text-[#FFFFFF]">
                       Operational Discovery
                     </span>
                   </div>
                   <div className="absolute inset-0 flex flex-col items-start justify-center gap-[72px] overflow-hidden rounded-[24px] border border-[#3B3B3B] bg-[#000000] p-[38px] text-left [backface-visibility:hidden] [transform:rotateY(180deg)]">
                     <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:48px_48px]" />
-                    <h3 className="relative max-w-[330px] font-[var(--font-sora)] text-[22px] font-[600] leading-[1.2] text-[#FFFFFF]">
+                    <h3 className="relative max-w-[330px] font-[family-name:var(--font-sora)] text-[22px] font-[weight:600] leading-[1.2] text-[#FFFFFF]">
                       Operational Discovery
                     </h3>
-                    <p className="relative max-w-[330px] font-[var(--font-inter)] text-[20px] font-[400] leading-[1.25] text-[#FFFFFF]">
+                    <p className="relative max-w-[330px] font-[family-name:var(--font-inter)] text-[20px] font-[weight:400] leading-[1.25] text-[#FFFFFF]">
                       We audit your processes, systems, and data flows to
                       identify where friction lives. Most companies skip this
                       step. We never do.
@@ -395,16 +395,16 @@ export default function Home() {
               <div className="group h-[561.55px] w-[413.33px] shrink-0 [perspective:1000px]">
                 <div className="relative h-full w-full rounded-[24px] transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                   <div className="absolute inset-0 flex flex-col justify-end rounded-[24px] border border-[#858382] bg-[#010C1B] pb-[8px] pl-[15px] [backface-visibility:hidden]">
-                    <span className="-translate-y-[25px] text-left text-[22px] font-[600] leading-[1.2] tracking-[-0.03em] text-[#FFFFFF]">
+                    <span className="-translate-y-[25px] text-left text-[22px] font-[weight:600] leading-[1.2] tracking-[-0.03em] text-[#FFFFFF]">
                       Systems Integration &amp; <br /> Business Intelligence
                     </span>
                   </div>
                   <div className="absolute inset-0 flex flex-col items-start justify-center gap-[72px] overflow-hidden rounded-[24px] bg-[#FF884C] p-[38px] text-left [backface-visibility:hidden] [transform:rotateY(180deg)]">
                     <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.16)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.16)_1px,transparent_1px)] bg-[size:48px_48px]" />
-                    <h3 className="relative max-w-[330px] font-[var(--font-sora)] text-[22px] font-[600] leading-[1.2] text-[#FFFFFF]">
+                    <h3 className="relative max-w-[330px] font-[family-name:var(--font-sora)] text-[22px] font-[weight:600] leading-[1.2] text-[#FFFFFF]">
                       Systems Integration &amp; Business Intelligence
                     </h3>
-                    <p className="relative max-w-[330px] font-[var(--font-inter)] text-[20px] font-[400] leading-[1.25] text-[#FFFFFF]">
+                    <p className="relative max-w-[330px] font-[family-name:var(--font-inter)] text-[20px] font-[weight:400] leading-[1.25] text-[#FFFFFF]">
                       Built on your processes, not someone else&apos;s template.
                       Whether it&apos;s connecting disconnected systems,
                       automating manual data flows, or building a tool that
@@ -417,16 +417,16 @@ export default function Home() {
               <div className="group h-[561.55px] w-[413.33px] shrink-0 [perspective:1000px]">
                 <div className="relative h-full w-full rounded-[24px] transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                   <div className="absolute inset-0 flex flex-col justify-end rounded-[24px] bg-[#FF884C] pb-[8px] pl-[15px] [backface-visibility:hidden]">
-                    <span className="-translate-y-[25px] text-left text-[22px] font-[600] leading-[1.2] tracking-[-0.03em] text-[#FFFFFF]">
+                    <span className="-translate-y-[25px] text-left text-[22px] font-[weight:600] leading-[1.2] tracking-[-0.03em] text-[#FFFFFF]">
                       Custom Software &amp; <br /> Workflow Automation
                     </span>
                   </div>
                   <div className="absolute inset-0 flex flex-col items-start justify-center gap-[72px] overflow-hidden rounded-[24px] border border-[#3B3B3B] bg-[#000000] p-[38px] text-left [backface-visibility:hidden] [transform:rotateY(180deg)]">
                     <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:48px_48px]" />
-                    <h3 className="relative max-w-[330px] font-[var(--font-sora)] text-[22px] font-[600] leading-[1.2] text-[#FFFFFF]">
+                    <h3 className="relative max-w-[330px] font-[family-name:var(--font-sora)] text-[22px] font-[weight:600] leading-[1.2] text-[#FFFFFF]">
                       Custom Software &amp; Workflow Automation
                     </h3>
-                    <p className="relative max-w-[330px] font-[var(--font-inter)] text-[20px] font-[400] leading-[1.25] text-[#FFFFFF]">
+                    <p className="relative max-w-[330px] font-[family-name:var(--font-inter)] text-[20px] font-[weight:400] leading-[1.25] text-[#FFFFFF]">
                       One source of truth. Your data lives in multiple systems,
                       but your team needs one clear picture. We connect
                       what&apos;s fragmented and make it visible.
@@ -457,27 +457,27 @@ export default function Home() {
             }}
           />
           <div className="relative z-10 flex flex-col items-center text-center">
-            <h2 className="text-[57.4px] font-[400] leading-[1.2] tracking-[-0.04em] text-[#858382]">
+            <h2 className="text-[57.4px] font-[weight:400] leading-[1.2] tracking-[-0.04em] text-[#858382]">
               Why Choose <span className="text-[#FF884C]">GroBird</span>
             </h2>
-            <p className="mt-6 max-w-[900px] text-[16px] font-[400] leading-[1.6] text-[#FFFFFF]">
+            <p className="mt-6 max-w-[900px] text-[16px] font-[weight:400] leading-[1.6] text-[#FFFFFF]">
               We think like operators, not vendors. We don&apos;t start with a
               tool. We start with your problem. We <br /> understand that
               technology serves operations, not the reverse.
             </p>
             <div className="mt-12 grid w-full max-w-[1300px] grid-cols-1 gap-y-6 text-left md:grid-cols-3 md:gap-x-[72px]">
-              <div className="font-[var(--font-inter)] p-0 text-[20px] font-[400] leading-[1.45] text-[#FFFFFF]">
+              <div className="font-[family-name:var(--font-inter)] p-0 text-[20px] font-[weight:400] leading-[1.45] text-[#FFFFFF]">
                 We build for outcomes, not features. Every system we create
                 reduces operational cost, increases control, and creates room
                 for your business to scale.
               </div>
-              <div className="font-[var(--font-inter)] p-0 text-[20px] font-[400] leading-[1.45] text-[#FFFFFF]">
+              <div className="font-[family-name:var(--font-inter)] p-0 text-[20px] font-[weight:400] leading-[1.45] text-[#FFFFFF]">
                 We work with the buying committee, not against it. We know your
                 CFO cares about ROI, your Head of Operations cares about running
                 the department smoothly, and your technical team cares about
                 integration and maintainability. We address all three.
               </div>
-              <div className="font-[var(--font-inter)] p-0 text-[20px] font-[400] leading-[1.45] text-[#FFFFFF]">
+              <div className="font-[family-name:var(--font-inter)] p-0 text-[20px] font-[weight:400] leading-[1.45] text-[#FFFFFF]">
                 We stay invested after launch. Technology is only valuable if it
                 keeps working. We offer ongoing support and optimization to
                 protect your investment and adapt to growth.
@@ -488,7 +488,7 @@ export default function Home() {
                 <span className="text-[50px] font-[200] leading-none opacity-[85%]">
                   85%
                 </span>
-                <span className="text-left text-[13px] font-[600] leading-[1.2] text-[#000000]">
+                <span className="text-left text-[13px] font-[weight:600] leading-[1.2] text-[#000000]">
                   <span className="whitespace-nowrap">
                     IMPROVEMENT IN <br /> BUSINESS FORECASTING <br /> ACCURACY
                   </span>
@@ -498,7 +498,7 @@ export default function Home() {
                 </span>
               </div>
               <div className="flex h-[198px] w-[386.67px] shrink-0 flex-col justify-between bg-[#DFDFDF] p-[15px] text-[#000000]">
-                <p className="text-left text-[13px] font-[600] leading-[1.2]">
+                <p className="text-left text-[13px] font-[weight:600] leading-[1.2]">
                   GROBIRD DIDN&apos;T JUST WRITE CODE;
                   <br />
                   THEY{" "}
@@ -516,7 +516,7 @@ export default function Home() {
                     height={34}
                     className="h-[34px] w-[100px] object-contain object-left"
                   />
-                  <div className="flex items-center gap-2 whitespace-nowrap text-[11.6px] font-[400]">
+                  <div className="flex items-center gap-2 whitespace-nowrap text-[11.6px] font-[weight:400]">
                     <span>SATYA MURTHY</span>
                     <span className="h-[25px] w-px bg-[#000000]/40" />
                     <span>CO-FOUNDER, PSF</span>
@@ -527,7 +527,7 @@ export default function Home() {
                 <span className="text-[50px] font-[200] leading-none opacity-[85%]">
                   35%
                 </span>
-                <span className="text-left text-[13px] font-[600] leading-[1.2] text-[#000000]">
+                <span className="text-left text-[13px] font-[weight:600] leading-[1.2] text-[#000000]">
                   <span className="whitespace-nowrap">
                     FASTER DECISION- <br /> MAKING SPEED THROUGH <br /> DATA
                     INTEGRATION
@@ -545,10 +545,10 @@ export default function Home() {
           className="flex h-auto w-full flex-col items-center justify-center bg-[#010C1B] px-[5px] py-[72px]"
           aria-label="Insights and Blogs section"
         >
-          <h2 className="font-[var(--font-sora)] text-[57.4px] font-[400] leading-[1.2] tracking-[-0.04em] text-[#858382]">
+          <h2 className="font-[family-name:var(--font-sora)] text-[57.4px] font-[weight:400] leading-[1.2] tracking-[-0.04em] text-[#858382]">
             Insights &amp; <span className="text-[#FF884C]">Blogs</span>
           </h2>
-          <p className="mt-6 max-w-[900px] text-center font-[var(--font-inter)] text-[16px] font-[400] leading-[1.6] text-[#FFFFFF]">
+          <p className="mt-6 max-w-[900px] text-center font-[family-name:var(--font-inter)] text-[16px] font-[weight:400] leading-[1.6] text-[#FFFFFF]">
             We think like operators, not vendors. We don&apos;t start with a
             tool. We <br /> start with your problem. We understand that
             technology serves operations, not the reverse.
@@ -563,7 +563,7 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(85,65,20,0.1)_1px,transparent_1px)] bg-[size:18px_18px]" />
               <div className="absolute left-1/2 top-1/2 flex h-[246px] w-[548px] max-w-[calc(100%-32px)] -translate-x-1/2 -translate-y-1/2 items-center justify-center bg-[#FF884C] px-6 py-8 text-center">
-                <h3 className="font-[var(--font-sora)] text-[36px] font-[400] leading-[1.15] text-[#000000]">
+                <h3 className="font-[family-name:var(--font-sora)] text-[36px] font-[weight:400] leading-[1.15] text-[#000000]">
                   Why Hiring An Ops
                   <br />
                   Coordinator Rarely Fixes A
@@ -574,19 +574,19 @@ export default function Home() {
             </div>
             <div className="flex min-h-[330px] flex-col justify-between bg-[#010C1B] px-8 py-10 text-[#FFFFFF] md:min-h-[370px] md:px-8 md:py-11">
               <div>
-                <h3 className="max-w-[500px] font-[var(--font-sora)] text-[31px] font-[400] leading-[1.15]">
+                <h3 className="max-w-[500px] font-[family-name:var(--font-sora)] text-[31px] font-[weight:400] leading-[1.15]">
                   Why Hiring An Ops Coordinator
                   <br />
                   Rarely Fixes A Process Problem
                 </h3>
-                <time className="mt-5 block font-[var(--font-inter)] text-[10px] font-[400] uppercase tracking-[0.04em] text-[#FFFFFF]">
+                <time className="mt-5 block font-[family-name:var(--font-inter)] text-[10px] font-[weight:400] uppercase tracking-[0.04em] text-[#FFFFFF]">
                   August 17, 2026
                 </time>
               </div>
               <div className="-mx-8 w-[calc(100%+4rem)] border-t border-[#5A5A5A] px-8 pt-6">
                 <button
                   type="button"
-                  className="flex w-full items-center justify-between font-[var(--font-inter)] text-[15.4px] font-[500] text-[#FFFFFF]"
+                  className="flex w-full items-center justify-between font-[family-name:var(--font-inter)] text-[15.4px] font-[weight:500] text-[#FFFFFF]"
                 >
                   <span>Read More</span>
                   <FaArrowRightLong className="text-[14px]" />
@@ -604,25 +604,25 @@ export default function Home() {
                   className="object-contain opacity-30 mix-blend-multiply"
                 />
                 <div className="absolute left-1/2 top-1/2 flex h-[151px] w-[350px] max-w-[calc(100%-30px)] -translate-x-1/2 -translate-y-1/2 items-center justify-center bg-[#000000] px-5 text-center">
-                  <h3 className="font-[var(--font-sora)] text-[19px] font-[300] leading-[1.25] text-[#FFFFFF]">
+                  <h3 className="font-[family-name:var(--font-sora)] text-[19px] font-[weight:300] leading-[1.25] text-[#FFFFFF]">
                     How To Scale Operations
                     <br />
                     Without Adding Headcount
                   </h3>
                 </div>
               </div>
-              <h3 className="mt-6 font-[var(--font-sora)] text-[19px] font-[300] leading-[1.25] text-[#FFFFFF]">
+              <h3 className="mt-6 font-[family-name:var(--font-sora)] text-[19px] font-[weight:300] leading-[1.25] text-[#FFFFFF]">
                 How To Scale Operations Without
                 <br />
                 Adding Headcount
               </h3>
-              <time className="mt-5 block font-[var(--font-inter)] text-[10px] font-[400] uppercase tracking-[0.04em]">
+              <time className="mt-5 block font-[family-name:var(--font-inter)] text-[10px] font-[weight:400] uppercase tracking-[0.04em]">
                 August 16, 2026
               </time>
               <div className="mt-6 border-t border-[#5A5A5A] pt-4">
                 <button
                   type="button"
-                  className="flex w-full items-center justify-between font-[var(--font-inter)] text-[15.4px] font-[500]"
+                  className="flex w-full items-center justify-between font-[family-name:var(--font-inter)] text-[15.4px] font-[weight:500]"
                 >
                   <span>Read More</span>
                   <FaArrowRightLong className="text-[14px]" />
@@ -634,25 +634,25 @@ export default function Home() {
               <div className="relative aspect-[1.67] overflow-hidden bg-[#010C1B] p-[15px]">
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:18px_18px]" />
                 <div className="absolute left-1/2 top-1/2 flex h-[227px] w-[301px] max-w-[calc(100%-30px)] -translate-x-1/2 -translate-y-1/2 items-center justify-center bg-[#FF884C] px-4 text-center">
-                  <h3 className="font-[var(--font-sora)] text-[19px] font-[300] leading-[1.25] text-[#FFFFFF]">
+                  <h3 className="font-[family-name:var(--font-sora)] text-[19px] font-[weight:300] leading-[1.25] text-[#FFFFFF]">
                     The Hidden Cost Of Manual
                     <br />
                     Data Entry (With The Math)
                   </h3>
                 </div>
               </div>
-              <h3 className="mt-6 font-[var(--font-sora)] text-[19px] font-[300] leading-[1.25] text-[#FFFFFF]">
+              <h3 className="mt-6 font-[family-name:var(--font-sora)] text-[19px] font-[weight:300] leading-[1.25] text-[#FFFFFF]">
                 The Hidden Cost Of Manual Data Entry
                 <br />
                 (With The Math)
               </h3>
-              <time className="mt-5 block font-[var(--font-inter)] text-[10px] font-[400] uppercase tracking-[0.04em]">
+              <time className="mt-5 block font-[family-name:var(--font-inter)] text-[10px] font-[weight:400] uppercase tracking-[0.04em]">
                 August 13, 2026
               </time>
               <div className="mt-6 border-t border-[#5A5A5A] pt-4">
                 <button
                   type="button"
-                  className="flex w-full items-center justify-between font-[var(--font-inter)] text-[15.4px] font-[500]"
+                  className="flex w-full items-center justify-between font-[family-name:var(--font-inter)] text-[15.4px] font-[weight:500]"
                 >
                   <span>Read More</span>
                   <FaArrowRightLong className="text-[14px]" />
@@ -664,25 +664,25 @@ export default function Home() {
               <div className="relative aspect-[1.67] overflow-hidden bg-[#2D7FF0] p-[15px]">
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.14)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.14)_1px,transparent_1px)] bg-[size:18px_18px]" />
                 <div className="absolute left-1/2 top-[74%] flex h-[151px] w-[350px] max-w-[calc(100%-30px)] -translate-x-1/2 -translate-y-1/2 items-center justify-center bg-[#000000] px-5 text-center">
-                  <h3 className="font-[var(--font-sora)] text-[19px] font-[300] leading-[1.25] text-[#FFFFFF]">
+                  <h3 className="font-[family-name:var(--font-sora)] text-[19px] font-[weight:300] leading-[1.25] text-[#FFFFFF]">
                     5 Signs Your Business Has
                     <br />
                     Outgrown Its Systems
                   </h3>
                 </div>
               </div>
-              <h3 className="mt-6 font-[var(--font-sora)] text-[19px] font-[300] leading-[1.25] text-[#FFFFFF]">
+              <h3 className="mt-6 font-[family-name:var(--font-sora)] text-[19px] font-[weight:300] leading-[1.25] text-[#FFFFFF]">
                 5 Signs Your Business Has Outgrown
                 <br />
                 Its Systems
               </h3>
-              <time className="mt-5 block font-[var(--font-inter)] text-[10px] font-[400] uppercase tracking-[0.04em]">
+              <time className="mt-5 block font-[family-name:var(--font-inter)] text-[10px] font-[weight:400] uppercase tracking-[0.04em]">
                 August 5, 2026
               </time>
               <div className="mt-6 border-t border-[#5A5A5A] pt-4">
                 <button
                   type="button"
-                  className="flex w-full items-center justify-between font-[var(--font-inter)] text-[15.4px] font-[500]"
+                  className="flex w-full items-center justify-between font-[family-name:var(--font-inter)] text-[15.4px] font-[weight:500]"
                 >
                   <span>Read More</span>
                   <FaArrowRightLong className="text-[14px]" />
@@ -692,7 +692,7 @@ export default function Home() {
           </div>
           <button
             type="button"
-            className="mt-14 flex h-[58px] w-[199.59px] cursor-pointer items-center justify-center gap-3 bg-[#FFFFFF] font-[var(--font-inter)] text-[15.6px] font-[500] text-[#000000] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#FF884C] hover:text-[#FFFFFF] hover:shadow-[0_8px_18px_rgba(255,136,76,0.28)] active:translate-y-0"
+            className="mt-14 flex h-[58px] w-[199.59px] cursor-pointer items-center justify-center gap-3 bg-[#FFFFFF] font-[family-name:var(--font-inter)] text-[15.6px] font-[weight:500] text-[#000000] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#FF884C] hover:text-[#FFFFFF] hover:shadow-[0_8px_18px_rgba(255,136,76,0.28)] active:translate-y-0"
           >
             <span>Explore More</span>
             <FaArrowRightLong className="text-[14px]" />
@@ -716,11 +716,11 @@ export default function Home() {
             className="absolute inset-0 z-[1] bg-[#000000]/45"
             aria-hidden="true"
           />
-          <h2 className="absolute left-[105px] top-1/2 z-10 -translate-y-1/2 font-[var(--font-sora)] text-[32px] font-[600] leading-[1.2] text-[#FFFFFF]">
+          <h2 className="absolute left-[105px] top-1/2 z-10 -translate-y-1/2 font-[family-name:var(--font-sora)] text-[32px] font-[weight:600] leading-[1.2] text-[#FFFFFF]">
             Ready to understand your <br /> operational roadmap?
           </h2>
           <div className="absolute right-[25px] top-1/2 z-10 flex w-[42%] max-w-[560px] -translate-y-1/2 flex-col items-start">
-            <p className="font-[var(--font-inter)] text-[16px] font-[300] leading-[1.6] text-[#FFFFFF]">
+            <p className="font-[family-name:var(--font-inter)] text-[16px] font-[weight:300] leading-[1.6] text-[#FFFFFF]">
               Start with a diagnostic conversation. We&apos;ll review your{" "}
               <br />
               processes and systems, identify what&apos;s holding you <br />{" "}
@@ -728,7 +728,7 @@ export default function Home() {
             </p>
             <button
               type="button"
-              className="mt-8 flex h-[58px] w-[371px] cursor-pointer items-center justify-center gap-3 bg-[#FFFFFF] font-[var(--font-inter)] text-[16px] font-[500] text-[#000000] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#FF884C] hover:text-[#FFFFFF] hover:shadow-[0_8px_18px_rgba(255,136,76,0.28)] active:translate-y-0"
+              className="mt-8 flex h-[58px] w-[371px] cursor-pointer items-center justify-center gap-3 bg-[#FFFFFF] font-[family-name:var(--font-inter)] text-[16px] font-[weight:500] text-[#000000] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:bg-[#FF884C] hover:text-[#FFFFFF] hover:shadow-[0_8px_18px_rgba(255,136,76,0.28)] active:translate-y-0"
             >
               Schedule an Operational Discovery Call
               <MdArrowOutward />
@@ -754,16 +754,16 @@ export default function Home() {
               height={67}
               className="h-[67px] w-[256.75px] -translate-x-[15px] object-contain object-left"
             />
-            <p className="mt-3 font-[var(--font-sora)] text-[15.1px] font-[400] text-[#FF884C]">
+            <p className="mt-3 font-[family-name:var(--font-sora)] text-[15.1px] font-[weight:400] text-[#FF884C]">
               Growing Beyond Limits.
             </p>
           </div>
 
           <div className="border-b border-[#242424] px-[25px] py-10 md:border-b-0">
-            <p className="font-[var(--font-inter)] text-[15.5px] font-[400] text-[#FFFFFF80]">
+            <p className="font-[family-name:var(--font-inter)] text-[15.5px] font-[weight:400] text-[#FFFFFF80]">
               Services
             </p>
-            <nav className="mt-4 flex flex-col gap-3 font-[var(--font-inter)] text-[13.3px] font-[400] text-[#FFFFFF]">
+            <nav className="mt-4 flex flex-col gap-3 font-[family-name:var(--font-inter)] text-[13.3px] font-[weight:400] text-[#FFFFFF]">
               <a
                 href="#"
                 className="cursor-pointer transition-colors duration-200 hover:text-[#FF884C]"
@@ -804,10 +804,10 @@ export default function Home() {
           </div>
 
           <div className="border-b border-[#242424] px-[25px] py-10 md:border-b-0">
-            <p className="font-[var(--font-inter)] text-[15.5px] font-[400] text-[#FFFFFF80]">
+            <p className="font-[family-name:var(--font-inter)] text-[15.5px] font-[weight:400] text-[#FFFFFF80]">
               Industries
             </p>
-            <nav className="mt-4 flex flex-col gap-3 font-[var(--font-inter)] text-[13.3px] font-[400] text-[#FFFFFF]">
+            <nav className="mt-4 flex flex-col gap-3 font-[family-name:var(--font-inter)] text-[13.3px] font-[weight:400] text-[#FFFFFF]">
               <a
                 href="#"
                 className="cursor-pointer transition-colors duration-200 hover:text-[#FF884C]"
@@ -842,10 +842,10 @@ export default function Home() {
           </div>
 
           <div className="border-b border-[#242424] px-[25px] py-10 md:border-b-0 md:border-r">
-            <p className="font-[var(--font-inter)] text-[15.5px] font-[400] text-[#FFFFFF80]">
+            <p className="font-[family-name:var(--font-inter)] text-[15.5px] font-[weight:400] text-[#FFFFFF80]">
               Resources
             </p>
-            <nav className="mt-4 flex flex-col gap-3 font-[var(--font-inter)] text-[13.3px] font-[400] text-[#FFFFFF]">
+            <nav className="mt-4 flex flex-col gap-3 font-[family-name:var(--font-inter)] text-[13.3px] font-[weight:400] text-[#FFFFFF]">
               <a
                 href="#"
                 className="cursor-pointer transition-colors duration-200 hover:text-[#FF884C]"
@@ -880,10 +880,10 @@ export default function Home() {
           </div>
 
           <div className="px-[25px] py-10 md:col-span-1">
-            <p className="font-[var(--font-inter)] text-[15.5px] font-[400] text-[#FFFFFF80]">
+            <p className="font-[family-name:var(--font-inter)] text-[15.5px] font-[weight:400] text-[#FFFFFF80]">
               Connect With Us
             </p>
-            <nav className="mt-4 flex flex-col gap-4 font-[var(--font-inter)] text-[15.6px] font-[400] text-[#FFFFFF]">
+            <nav className="mt-4 flex flex-col gap-4 font-[family-name:var(--font-inter)] text-[15.6px] font-[weight:400] text-[#FFFFFF]">
               <a
                 href="#"
                 className="flex cursor-pointer items-center gap-3 transition-colors duration-200 hover:text-[#FF884C]"
