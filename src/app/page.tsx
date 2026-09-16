@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { IoIosArrowUp } from "react-icons/io";
 import { MdArrowOutward } from "react-icons/md";
 
@@ -236,7 +237,7 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <div className="relative w-1/2 overflow-hidden border-r-2 border-[#00a8e8] bg-[#010C1B]">
+            <div className="relative w-1/2 overflow-hidden border-r-2  bg-[#010C1B]">
               <div className="pointer-events-none absolute inset-0 grid grid-cols-6 grid-rows-7">
                 {Array.from({ length: 42 }, (_, index) => (
                   <div
@@ -635,15 +636,19 @@ export default function Home() {
             playsInline
             aria-hidden="true"
           />
-          <div className="absolute inset-0 z-[1] bg-[#000000]/45" aria-hidden="true" />
+          <div
+            className="absolute inset-0 z-[1] bg-[#000000]/45"
+            aria-hidden="true"
+          />
           <h2 className="absolute left-[105px] top-1/2 z-10 -translate-y-1/2 font-[var(--font-sora)] text-[32px] font-[600] leading-[1.2] text-[#FFFFFF]">
             Ready to understand your <br /> operational roadmap?
           </h2>
           <div className="absolute right-[25px] top-1/2 z-10 flex w-[42%] max-w-[560px] -translate-y-1/2 flex-col items-start">
             <p className="font-[var(--font-inter)] text-[16px] font-[300] leading-[1.6] text-[#FFFFFF]">
-              Start with a diagnostic conversation. We&apos;ll review your <br />
-              processes and systems, identify what&apos;s holding you <br /> back, and
-              outline a path forward.
+              Start with a diagnostic conversation. We&apos;ll review your{" "}
+              <br />
+              processes and systems, identify what&apos;s holding you <br />{" "}
+              back, and outline a path forward.
             </p>
             <button
               type="button"
@@ -655,6 +660,167 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <footer
+        className="h-[667px] w-full border-t border-[#242424] bg-[#010C1B] text-[#FFFFFF]"
+        aria-label="Footer"
+      >
+        <div className="mx-auto grid w-full max-w-[1600px] grid-cols-1 border-b border-[#242424] md:grid-cols-[1.2fr_1fr_1fr_1fr_1.2fr]">
+          <div className="border-b border-[#242424] px-[25px] py-10 md:border-b-0 md:border-r">
+            <Image
+              src="/footerlogo.png"
+              alt="Gobird logo"
+              width={256.75}
+              height={67}
+              className="h-[67px] w-[256.75px] -translate-x-[15px] object-contain object-left"
+            />
+            <p className="mt-3 font-[var(--font-sora)] text-[15.1px] font-[400] text-[#FF884C]">
+              Growing Beyond Limits.
+            </p>
+          </div>
+
+          <div className="border-b border-[#242424] px-[25px] py-10 md:border-b-0">
+            <p className="font-[var(--font-inter)] text-[15.5px] font-[400] text-[#FFFFFF80]">
+              Services
+            </p>
+            <nav className="mt-4 flex flex-col gap-3 font-[var(--font-inter)] text-[13.3px] font-[400] text-[#FFFFFF]">
+              <a
+                href="#"
+                className="cursor-pointer transition-colors duration-200 hover:text-[#FF884C]"
+              >
+                Operational Discovery
+              </a>
+              <a
+                href="#"
+                className="cursor-pointer transition-colors duration-200 hover:text-[#FF884C]"
+              >
+                Custom Software
+              </a>
+              <a
+                href="#"
+                className="cursor-pointer transition-colors duration-200 hover:text-[#FF884C]"
+              >
+                Workflow Automation
+              </a>
+              <a
+                href="#"
+                className="cursor-pointer transition-colors duration-200 hover:text-[#FF884C]"
+              >
+                System Integration
+              </a>
+              <a
+                href="#"
+                className="cursor-pointer transition-colors duration-200 hover:text-[#FF884C]"
+              >
+                Business Intelligence
+              </a>
+              <a
+                href="#"
+                className="cursor-pointer transition-colors duration-200 hover:text-[#FF884C]"
+              >
+                Managed Services
+              </a>
+            </nav>
+          </div>
+
+          <div className="border-b border-[#242424] px-[25px] py-10 md:border-b-0">
+            <p className="font-[var(--font-inter)] text-[15.5px] font-[400] text-[#FFFFFF80]">
+              Industries
+            </p>
+            <nav className="mt-4 flex flex-col gap-3 font-[var(--font-inter)] text-[13.3px] font-[400] text-[#FFFFFF]">
+              <a
+                href="#"
+                className="cursor-pointer transition-colors duration-200 hover:text-[#FF884C]"
+              >
+                Fintech
+              </a>
+              <a
+                href="#"
+                className="cursor-pointer transition-colors duration-200 hover:text-[#FF884C]"
+              >
+                Logistics
+              </a>
+              <a
+                href="#"
+                className="cursor-pointer transition-colors duration-200 hover:text-[#FF884C]"
+              >
+                Healthcare
+              </a>
+              <a
+                href="#"
+                className="cursor-pointer transition-colors duration-200 hover:text-[#FF884C]"
+              >
+                Lending
+              </a>
+              <a
+                href="#"
+                className="cursor-pointer transition-colors duration-200 hover:text-[#FF884C]"
+              >
+                Manufacturing
+              </a>
+            </nav>
+          </div>
+
+          <div className="border-b border-[#242424] px-[25px] py-10 md:border-b-0 md:border-r">
+            <p className="font-[var(--font-inter)] text-[15.5px] font-[400] text-[#FFFFFF80]">
+              Resources
+            </p>
+            <nav className="mt-4 flex flex-col gap-3 font-[var(--font-inter)] text-[13.3px] font-[400] text-[#FFFFFF]">
+              <a
+                href="#"
+                className="cursor-pointer transition-colors duration-200 hover:text-[#FF884C]"
+              >
+                Partners
+              </a>
+              <a
+                href="#"
+                className="cursor-pointer transition-colors duration-200 hover:text-[#FF884C]"
+              >
+                Blog
+              </a>
+              <a
+                href="#"
+                className="cursor-pointer transition-colors duration-200 hover:text-[#FF884C]"
+              >
+                About Us
+              </a>
+              <a
+                href="#"
+                className="cursor-pointer transition-colors duration-200 hover:text-[#FF884C]"
+              >
+                Terms &amp; Conditions
+              </a>
+              <a
+                href="#"
+                className="cursor-pointer transition-colors duration-200 hover:text-[#FF884C]"
+              >
+                Privacy Policy
+              </a>
+            </nav>
+          </div>
+
+          <div className="px-[25px] py-10 md:col-span-1">
+            <p className="font-[var(--font-inter)] text-[15.5px] font-[400] text-[#FFFFFF80]">
+              Connect With Us
+            </p>
+            <nav className="mt-4 flex flex-col gap-4 font-[var(--font-inter)] text-[15.6px] font-[400] text-[#FFFFFF]">
+              <a
+                href="#"
+                className="flex cursor-pointer items-center gap-3 transition-colors duration-200 hover:text-[#FF884C]"
+              >
+                <FaLinkedin className="h-[22px] w-[22px]" />
+                LinkedIn
+              </a>
+              <a
+                href="#"
+                className="flex cursor-pointer items-center gap-3 transition-colors duration-200 hover:text-[#FF884C]"
+              >
+                <FaInstagram className="h-[22px] w-[22px]" />
+                Instagram
+              </a>
+            </nav>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
