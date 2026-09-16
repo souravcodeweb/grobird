@@ -197,7 +197,7 @@ export default function Home() {
       </header>
 
       <main className="w-full bg-[#010C1B]">
-        <section className="h-[calc(100vh-71px)] w-full border-b border-[#3B3B3B]">
+        <section className="relative h-[calc(100vh-71px)] w-full border-b border-[#3B3B3B]">
           <div className="mx-auto flex h-[95%] max-w-[1600px]">
             <div className="flex w-1/2 items-center bg-[#010C1B] px-[25px]">
               <div className="flex flex-col items-start">
@@ -237,15 +237,17 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <div className="relative w-1/2 overflow-hidden border-r-2  bg-[#010C1B]">
-              <div className="pointer-events-none absolute inset-0 grid grid-cols-6 grid-rows-7">
-                {Array.from({ length: 42 }, (_, index) => (
-                  <div
-                    key={index}
-                    className="border-r border-b border-[#242424]"
-                  />
-                ))}
-              </div>
+          </div>
+          <div className="absolute inset-y-0 left-1/2 right-0 h-[95%] overflow-hidden bg-[#010C1B] pr-0">
+            <div className="pointer-events-none absolute inset-0 grid grid-cols-6 grid-rows-7">
+              {Array.from({ length: 42 }, (_, index) => (
+                <div
+                  key={index}
+                  className={`border-[#242424] ${
+                    index % 6 !== 5 ? "border-r" : ""
+                  } ${index < 36 ? "border-b" : ""}`}
+                />
+              ))}
             </div>
           </div>
         </section>
@@ -661,7 +663,12 @@ export default function Home() {
         </section>
       </main>
       <footer
-        className="h-[667px] w-full border-t border-[#242424] bg-[#010C1B] text-[#FFFFFF]"
+        className="relative h-[670px] w-full border-t border-[#242424] bg-[#010C1B] text-[#FFFFFF]"
+        style={{
+          backgroundColor: "rgb(1, 12, 27)",
+          backgroundImage:
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.44) 34%, rgba(0, 0, 0, 0) 58%), radial-gradient(circle at 28% 92%, rgba(24, 61, 168, 0.72) 0%, rgba(12, 34, 102, 0.42) 24%, rgba(1, 12, 27, 0) 58%), radial-gradient(circle at 45% 2%, rgba(205, 72, 23, 0.5) 0%, rgba(120, 37, 20, 0.2) 13%, rgba(1, 12, 27, 0) 32%), linear-gradient(rgb(0, 0, 4), rgb(1, 12, 27))",
+        }}
         aria-label="Footer"
       >
         <div className="mx-auto grid w-full max-w-[1600px] grid-cols-1 border-b border-[#242424] md:grid-cols-[1.2fr_1fr_1fr_1fr_1.2fr]">
@@ -819,6 +826,92 @@ export default function Home() {
               </a>
             </nav>
           </div>
+        </div>
+        <div className="absolute bottom-0 left-0 flex h-[385px] w-full items-end overflow-hidden pt-[60px] opacity-[0.65]">
+          <Image
+            src="/g.png"
+            alt="G"
+            width={272.02}
+            height={290.23}
+            className="block h-[290.23px] min-w-0 object-contain object-left"
+            style={{
+              flex: "272.02 1 272.02px",
+              filter:
+                "brightness(0) saturate(100%) invert(62%) sepia(8%) saturate(360%) hue-rotate(194deg) brightness(91%) contrast(88%)",
+            }}
+          />
+          <Image
+            src="/r.png"
+            alt="R"
+            width={116}
+            height={220}
+            className="block h-[220px] min-w-0 object-contain object-left"
+            style={{
+              flex: "116 1 116px",
+              filter:
+                "brightness(0) saturate(100%) invert(62%) sepia(8%) saturate(360%) hue-rotate(194deg) brightness(91%) contrast(88%)",
+            }}
+          />
+          <Image
+            src="/o.png"
+            alt="O"
+            width={212}
+            height={220}
+            className="block h-[220px] min-w-0 object-contain object-left"
+            style={{
+              flex: "212 1 212px",
+              filter:
+                "brightness(0) saturate(100%) invert(62%) sepia(8%) saturate(360%) hue-rotate(194deg) brightness(91%) contrast(88%)",
+            }}
+          />
+          <Image
+            src="/b.png"
+            alt="B"
+            width={243}
+            height={370}
+            className="block h-[370px] min-w-0 object-contain object-left"
+            style={{
+              flex: "243 1 243px",
+              filter:
+                "brightness(0) saturate(100%) invert(31%) sepia(12%) saturate(700%) hue-rotate(190deg) brightness(89%) contrast(88%)",
+            }}
+          />
+          <Image
+            src="/i.png"
+            alt="I"
+            width={35}
+            height={292}
+            className="block h-[292px] min-w-0 object-contain object-left"
+            style={{
+              flex: "35 1 35px",
+              filter:
+                "brightness(0) saturate(100%) invert(62%) sepia(8%) saturate(360%) hue-rotate(194deg) brightness(91%) contrast(88%)",
+            }}
+          />
+          <Image
+            src="/rr.png"
+            alt="R"
+            width={114}
+            height={218}
+            className="translate-x-12 block h-[218px] min-w-0 object-contain object-left"
+            style={{
+              flex: "114 1 114px",
+              filter:
+                "brightness(0) saturate(100%) invert(62%) sepia(8%) saturate(360%) hue-rotate(194deg) brightness(91%) contrast(88%)",
+            }}
+          />
+          <Image
+            src="/d.png"
+            alt="D"
+            width={213}
+            height={304}
+            className="translate-x-10 block h-[304px] min-w-0 object-contain object-left"
+            style={{
+              flex: "213 1 213px",
+              filter:
+                "brightness(0) saturate(100%) invert(62%) sepia(8%) saturate(360%) hue-rotate(194deg) brightness(91%) contrast(88%)",
+            }}
+          />
         </div>
       </footer>
     </div>
