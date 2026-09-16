@@ -124,7 +124,7 @@ export default function Home() {
               width={277}
               height={233}
               priority
-              className="h-[23px] w-auto max-w-[120px] object-contain"
+              className="h-[30px] w-auto max-w-[120px] object-contain"
             />
           </div>
 
@@ -249,6 +249,17 @@ export default function Home() {
                 />
               ))}
             </div>
+            <Image
+              src="/herobgr.png"
+              alt=""
+              width={1152}
+              height={1536}
+              priority
+              className="absolute left-[calc(50%+44px)] top-[calc(50%+30px)] z-10 h-[92%] w-auto -translate-x-1/2 -translate-y-1/2 object-contain"
+              style={{
+                filter: "brightness(0.72) contrast(1.08) saturate(0.82)",
+              }}
+            />
           </div>
         </section>
 
@@ -349,7 +360,7 @@ export default function Home() {
               <span className="text-[#858382]">What We</span>{" "}
               <span className="text-[#FF884C]">Do</span>
             </h2>
-            <p className="mt-6 max-w-[900px] text-[16px] font-[400] leading-[1.6] text-[#FFFFFF]">
+            <p className="mt-6 translate-y-4 max-w-[900px] text-[16px] font-[400] leading-[1.6] text-[#FFFFFF]">
               <span className="whitespace-nowrap">
                 Operating at scale requires systems. But most platforms are
                 built for generic companies, not yours.
@@ -361,30 +372,91 @@ export default function Home() {
               We specialize in three types of technology delivery:
             </p>
             <div className="mt-12 flex gap-[24px]">
-              <div className="flex h-[561.55px] w-[413.33px] shrink-0 flex-col justify-end rounded-[24px] bg-[#FF884C] pb-[8px] pl-[15px]">
-                <span className="-translate-y-[25px] text-left text-[22px] font-[600] leading-[1.2] tracking-[-0.03em] text-[#FFFFFF]">
-                  Operational Discovery
-                </span>
+              <div className="group h-[561.55px] w-[413.33px] shrink-0 [perspective:1000px]">
+                <div className="relative h-full w-full rounded-[24px] transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                  <div className="absolute inset-0 flex flex-col justify-end rounded-[24px] bg-[#FF884C] pb-[8px] pl-[15px] [backface-visibility:hidden]">
+                    <span className="-translate-y-[25px] text-left text-[22px] font-[600] leading-[1.2] tracking-[-0.03em] text-[#FFFFFF]">
+                      Operational Discovery
+                    </span>
+                  </div>
+                  <div className="absolute inset-0 flex flex-col items-start justify-center gap-[72px] overflow-hidden rounded-[24px] border border-[#3B3B3B] bg-[#000000] p-[38px] text-left [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                    <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:48px_48px]" />
+                    <h3 className="relative max-w-[330px] font-[var(--font-sora)] text-[22px] font-[600] leading-[1.2] text-[#FFFFFF]">
+                      Operational Discovery
+                    </h3>
+                    <p className="relative max-w-[330px] font-[var(--font-inter)] text-[20px] font-[400] leading-[1.25] text-[#FFFFFF]">
+                      We audit your processes, systems, and data flows to
+                      identify where friction lives. Most companies skip this
+                      step. We never do.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="flex h-[561.55px] w-[413.33px] shrink-0 flex-col justify-end rounded-[24px] border border-[#858382] bg-[#010C1B] pb-[8px] pl-[15px]">
-                <span className="-translate-y-[25px] text-left text-[22px] font-[600] leading-[1.2] tracking-[-0.03em] text-[#FFFFFF]">
-                  Systems Integration &amp; <br /> Business Intelligence
-                </span>
+              <div className="group h-[561.55px] w-[413.33px] shrink-0 [perspective:1000px]">
+                <div className="relative h-full w-full rounded-[24px] transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                  <div className="absolute inset-0 flex flex-col justify-end rounded-[24px] border border-[#858382] bg-[#010C1B] pb-[8px] pl-[15px] [backface-visibility:hidden]">
+                    <span className="-translate-y-[25px] text-left text-[22px] font-[600] leading-[1.2] tracking-[-0.03em] text-[#FFFFFF]">
+                      Systems Integration &amp; <br /> Business Intelligence
+                    </span>
+                  </div>
+                  <div className="absolute inset-0 flex flex-col items-start justify-center gap-[72px] overflow-hidden rounded-[24px] bg-[#FF884C] p-[38px] text-left [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                    <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.16)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.16)_1px,transparent_1px)] bg-[size:48px_48px]" />
+                    <h3 className="relative max-w-[330px] font-[var(--font-sora)] text-[22px] font-[600] leading-[1.2] text-[#FFFFFF]">
+                      Systems Integration &amp; Business Intelligence
+                    </h3>
+                    <p className="relative max-w-[330px] font-[var(--font-inter)] text-[20px] font-[400] leading-[1.25] text-[#FFFFFF]">
+                      Built on your processes, not someone else&apos;s template.
+                      Whether it&apos;s connecting disconnected systems,
+                      automating manual data flows, or building a tool that
+                      doesn&apos;t exist yet, we deliver technology that fits
+                      your operation.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="flex h-[561.55px] w-[413.33px] shrink-0 flex-col justify-end rounded-[24px] bg-[#FF884C] pb-[8px] pl-[15px]">
-                <span className="-translate-y-[25px] text-left text-[22px] font-[600] leading-[1.2] tracking-[-0.03em] text-[#FFFFFF]">
-                  Custom Software &amp; <br /> Workflow Automation
-                </span>
+              <div className="group h-[561.55px] w-[413.33px] shrink-0 [perspective:1000px]">
+                <div className="relative h-full w-full rounded-[24px] transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                  <div className="absolute inset-0 flex flex-col justify-end rounded-[24px] bg-[#FF884C] pb-[8px] pl-[15px] [backface-visibility:hidden]">
+                    <span className="-translate-y-[25px] text-left text-[22px] font-[600] leading-[1.2] tracking-[-0.03em] text-[#FFFFFF]">
+                      Custom Software &amp; <br /> Workflow Automation
+                    </span>
+                  </div>
+                  <div className="absolute inset-0 flex flex-col items-start justify-center gap-[72px] overflow-hidden rounded-[24px] border border-[#3B3B3B] bg-[#000000] p-[38px] text-left [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                    <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:48px_48px]" />
+                    <h3 className="relative max-w-[330px] font-[var(--font-sora)] text-[22px] font-[600] leading-[1.2] text-[#FFFFFF]">
+                      Custom Software &amp; Workflow Automation
+                    </h3>
+                    <p className="relative max-w-[330px] font-[var(--font-inter)] text-[20px] font-[400] leading-[1.25] text-[#FFFFFF]">
+                      One source of truth. Your data lives in multiple systems,
+                      but your team needs one clear picture. We connect
+                      what&apos;s fragmented and make it visible.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         <section
-          className="flex h-auto min-h-[760px] w-full items-center justify-center overflow-hidden bg-[#010C1B] px-[25px] pt-[72px] pb-[72px]"
+          className="relative flex h-auto w-full items-center justify-center overflow-hidden bg-[#010C1B] px-[25px] pt-[72px] pb-[72px]"
           aria-label="Why Choose GroBird section"
         >
-          <div className="flex flex-col items-center text-center">
+          <div className="pointer-events-none absolute bottom-0 left-1/2 top-[180px] w-full max-w-[650px] -translate-x-1/2 bg-[linear-gradient(rgba(255,255,255,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.07)_1px,transparent_1px)] bg-[size:62px_62px]" />
+          <div className="pointer-events-none absolute left-1/2 right-1/2 top-[180px] z-[1] h-px w-full max-w-[650px] -translate-x-1/2 bg-[#010C1B]" />
+          <div className="pointer-events-none absolute bottom-0 left-[calc(50%-325px)] top-[180px] z-[1] w-px bg-[#010C1B]" />
+          <Image
+            src="/b.png"
+            alt=""
+            width={243}
+            height={370}
+            className="pointer-events-none absolute left-1/2 top-[58%] z-0 h-[370px] w-[243px] -translate-x-1/2 -translate-y-1/2 object-contain opacity-20"
+            style={{
+              filter:
+                "brightness(0) saturate(100%) invert(29%) sepia(12%) saturate(650%) hue-rotate(190deg) brightness(90%) contrast(88%)",
+            }}
+          />
+          <div className="relative z-10 flex flex-col items-center text-center">
             <h2 className="text-[57.4px] font-[400] leading-[1.2] tracking-[-0.04em] text-[#858382]">
               Why Choose <span className="text-[#FF884C]">GroBird</span>
             </h2>
@@ -393,7 +465,7 @@ export default function Home() {
               tool. We start with your problem. We <br /> understand that
               technology serves operations, not the reverse.
             </p>
-            <div className="mt-12 grid w-full max-w-[1300px] grid-cols-1 gap-6 text-left md:grid-cols-3">
+            <div className="mt-12 grid w-full max-w-[1300px] grid-cols-1 gap-y-6 text-left md:grid-cols-3 md:gap-x-[72px]">
               <div className="font-[var(--font-inter)] p-0 text-[20px] font-[400] leading-[1.45] text-[#FFFFFF]">
                 We build for outcomes, not features. Every system we create
                 reduces operational cost, increases control, and creates room
@@ -468,6 +540,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+
         <section
           className="flex h-auto w-full flex-col items-center justify-center bg-[#010C1B] px-[5px] py-[72px]"
           aria-label="Insights and Blogs section"
@@ -625,6 +698,7 @@ export default function Home() {
             <FaArrowRightLong className="text-[14px]" />
           </button>
         </section>
+
         <section
           className="relative h-[537px] w-full overflow-hidden bg-[#010C1B] py-[72px]"
           aria-label="Video section"
