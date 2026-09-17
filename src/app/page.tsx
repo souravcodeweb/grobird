@@ -156,7 +156,11 @@ export default function Home() {
                   {serviceItems.map((item) => (
                     <a
                       key={item.title}
-                      href="#"
+                      href={
+                        item.title === "Operational Discovery"
+                          ? "/services/operational-discovery"
+                          : "#"
+                      }
                       className="flex cursor-pointer items-start gap-3 rounded-none px-2 py-2 transition hover:bg-white/40"
                     >
                       <div className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full bg-[#F9F8FF] text-[#f0732c]">
@@ -752,7 +756,7 @@ export default function Home() {
               alt="Gobird logo"
               width={256.75}
               height={67}
-              className="h-[67px] w-[256.75px] -translate-x-[15px] object-contain object-left"
+              className="h-[67px] w-auto -translate-x-[15px] object-contain object-left"
             />
             <p className="mt-3 font-[family-name:var(--font-sora)] text-[15.1px] font-[weight:400] text-[#FF884C]">
               Growing Beyond Limits.
@@ -907,7 +911,7 @@ export default function Home() {
             alt="G"
             width={272.02}
             height={290.23}
-            className="block h-[290.23px] min-w-0 object-contain object-left"
+            className="block h-[290.23px] w-auto min-w-0 object-contain object-left"
             style={{
               flex: "272.02 1 272.02px",
               filter:
@@ -919,7 +923,7 @@ export default function Home() {
             alt="R"
             width={116}
             height={220}
-            className="block h-[220px] min-w-0 object-contain object-left"
+            className="block h-[220px] w-auto min-w-0 object-contain object-left"
             style={{
               flex: "116 1 116px",
               filter:
@@ -931,7 +935,7 @@ export default function Home() {
             alt="O"
             width={212}
             height={220}
-            className="block h-[220px] min-w-0 object-contain object-left"
+            className="block h-[220px] w-auto min-w-0 object-contain object-left"
             style={{
               flex: "212 1 212px",
               filter:
@@ -943,7 +947,7 @@ export default function Home() {
             alt="B"
             width={243}
             height={370}
-            className="block h-[370px] min-w-0 object-contain object-left"
+            className="block h-[370px] w-auto min-w-0 object-contain object-left"
             style={{
               flex: "243 1 243px",
               filter:
@@ -955,7 +959,7 @@ export default function Home() {
             alt="I"
             width={35}
             height={292}
-            className="block h-[292px] min-w-0 object-contain object-left"
+            className="block h-[292px] w-auto min-w-0 object-contain object-left"
             style={{
               flex: "35 1 35px",
               filter:
@@ -967,7 +971,7 @@ export default function Home() {
             alt="R"
             width={114}
             height={218}
-            className="translate-x-12 block h-[218px] min-w-0 object-contain object-left"
+            className="translate-x-12 block h-[218px] w-auto min-w-0 object-contain object-left"
             style={{
               flex: "114 1 114px",
               filter:
@@ -979,7 +983,7 @@ export default function Home() {
             alt="D"
             width={213}
             height={304}
-            className="translate-x-10 block h-[304px] min-w-0 object-contain object-left"
+            className="translate-x-10 block h-[304px] w-auto min-w-0 object-contain object-left"
             style={{
               flex: "213 1 213px",
               filter:
