@@ -161,6 +161,8 @@ export function GobirdHeader() {
                         ? "/services/custom-software"
                         : item.title === "Workflow Automation"
                         ? "/services/workflow-automation"
+                        : item.title === "System Integration"
+                        ? "/services/system-integration"
                         : "#"
                     }
                     className="flex cursor-pointer items-start gap-3 rounded-none px-2 py-2 transition hover:bg-white/40"
