@@ -1,8 +1,27 @@
 interface SubFooterProps {
   className?: string;
+  titleLine1?: string;
+  titleLine2?: string;
+  titleHighlight?: string;
+  description?: React.ReactNode;
+  backgroundImage?: string;
+  buttonText?: string;
 }
 
-export function SubFooter({ className = "" }: SubFooterProps) {
+export function SubFooter({
+  className = "",
+  titleLine1 = "Ready to understand where",
+  titleLine2 = "your operational ",
+  titleHighlight = " friction lives?",
+  description = (
+    <>
+      Start your discovery today. We deliver a decision-ready roadmap <br />
+      in four weeks — no vendor bias, no guesswork.
+    </>
+  ),
+  backgroundImage = "/subbg1.png",
+  buttonText = "Request an Operational Audit",
+}: SubFooterProps) {
   return (
     <section
       className={[
@@ -12,29 +31,28 @@ export function SubFooter({ className = "" }: SubFooterProps) {
         .filter(Boolean)
         .join(" ")}
       style={{
-        backgroundImage: 'url("/subbg1.png")',
+        backgroundImage: `url("${backgroundImage}")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
     >
       <h2 className="relative z-10 text-center font-[family-name:var(--font-sora)] text-[45px] font-[400]">
-        <span className="text-[#858382]">Ready to understand where</span>
+        <span className="text-[#858382]">{titleLine1}</span>
         <br />
-        <span className="text-white">your operational </span>
-        <span className="text-[#FF884C]">friction lives?</span>
+        <span className="text-white">{titleLine2}</span>
+        <span className="text-[#FF884C]">{titleHighlight}</span>
       </h2>
 
       <p className="relative z-10 mt-[30px] text-center font-[family-name:var(--font-inter)] text-[16px] font-[400]">
-        Start your discovery today. We deliver a decision-ready roadmap <br />
-        in four weeks — no vendor bias, no guesswork.
+        {description}
       </p>
 
       <button
         type="button"
         className="relative z-10 mt-[35px] h-[55px] w-[318px] cursor-pointer bg-[#FF884C] font-[family-name:var(--font-sora)] text-[15px] font-[400] text-white transition-all duration-300 hover:scale-[1.02] hover:bg-[#ff9a67]"
       >
-        Request an Operational Audit
+        {buttonText}
       </button>
     </section>
   );

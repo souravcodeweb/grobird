@@ -3,9 +3,26 @@ import type { ReactNode } from "react";
 interface ServicesHeroProps {
   children?: ReactNode;
   className?: string;
+  eyebrow?: string;
+  headingLines?: [string, string, string];
+  primaryCta?: string;
+  secondaryCta?: string;
+  description?: ReactNode;
+  descriptionPosition?: "left" | "right";
+  backgroundImage?: string;
 }
 
-export function ServicesHero({ children, className = "" }: ServicesHeroProps) {
+export function ServicesHero({
+  children,
+  className = "",
+  eyebrow = "OPERATIONAL DISCOVERY · DIAGNOSE",
+  headingLines = ["Know Your", "Bottlenecks", "Before You Build"],
+  primaryCta,
+  secondaryCta,
+  description,
+  descriptionPosition = "right",
+  backgroundImage = "/servicesod.png",
+}: ServicesHeroProps) {
   return (
     <section
       className={[
@@ -15,7 +32,7 @@ export function ServicesHero({ children, className = "" }: ServicesHeroProps) {
         .filter(Boolean)
         .join(" ")}
       style={{
-        backgroundImage: 'url("/servicesod.png")',
+        backgroundImage: `url("${backgroundImage}")`,
         backgroundSize: "cover",
         backgroundPosition: "center center",
         backgroundRepeat: "no-repeat",
@@ -39,44 +56,54 @@ export function ServicesHero({ children, className = "" }: ServicesHeroProps) {
           <div className="max-w-[700px] text-left">
             <div className="mb-6 inline-flex items-center gap-2 rounded-[10px] border border-[#FF884C40] bg-transparent px-3 py-2 font-[family-name:var(--font-sora)] text-[11px] font-[600] uppercase tracking-[0.22em] text-[#FF884C]">
               <span className="h-2 w-2 rounded-full bg-[#FF884C]" />
-              OPERATIONAL DISCOVERY · DIAGNOSE
+              {eyebrow}
             </div>
 
             <h1 className="font-[family-name:var(--font-sora)] text-[57px] font-[400] leading-[68px] tracking-[-0.06em]">
-              <span className="block text-[#827E7E]">Know Your</span>
+              <span className="block text-[#827E7E]">{headingLines[0]}</span>
 
-              <span className="block text-[#FFFFFF]">Bottlenecks</span>
+              <span className="block text-[#FFFFFF]">{headingLines[1]}</span>
 
-              <span className="block text-[#FF884C]">Before You Build</span>
+              <span className="block text-[#FF884C]">{headingLines[2]}</span>
             </h1>
 
-            <div className="mt-8 flex flex-wrap gap-4">
-              <button
-                type="button"
-                className="inline-flex h-[55px] w-[288px] cursor-pointer items-center justify-center rounded-[10px] bg-[#FF884C] font-[family-name:var(--font-sora)] text-[15px] font-[600] text-white shadow-[0_10px_25px_rgba(255,136,76,0.35)] transition hover:bg-[#ff9a67]"
-              >
-                Request an Operational Audit
-              </button>
+            {description && descriptionPosition === "left" ? (
+              <p className="mt-8 w-full max-w-none font-[family-name:var(--font-inter)] text-[16px] font-[400] leading-[1.7] text-white/80">
+                {description}
+              </p>
+            ) : null}
 
-              <button
-                type="button"
-                className="inline-flex h-[55px] w-[220px] cursor-pointer items-center justify-center rounded-[10px] border border-[#FFFFFF1A] bg-transparent font-[family-name:var(--font-sora)] text-[15px] font-[600] text-white transition hover:border-white/40 hover:bg-white/5"
-              >
-                Learn the process
-              </button>
-            </div>
+            {primaryCta || secondaryCta ? (
+              <div className="mt-8 flex flex-wrap gap-4">
+                {primaryCta ? (
+                  <button
+                    type="button"
+                    className="inline-flex h-[55px] w-[288px] cursor-pointer items-center justify-center rounded-[10px] bg-[#FF884C] font-[family-name:var(--font-sora)] text-[15px] font-[600] text-white shadow-[0_10px_25px_rgba(255,136,76,0.35)] transition hover:bg-[#ff9a67]"
+                  >
+                    {primaryCta}
+                  </button>
+                ) : null}
+
+                {secondaryCta ? (
+                  <button
+                    type="button"
+                    className="inline-flex h-[55px] w-[220px] cursor-pointer items-center justify-center rounded-[10px] border border-[#FFFFFF1A] bg-transparent font-[family-name:var(--font-sora)] text-[15px] font-[600] text-white transition hover:border-white/40 hover:bg-white/5"
+                  >
+                    {secondaryCta}
+                  </button>
+                ) : null}
+              </div>
+            ) : null}
           </div>
 
           {/* Right Content */}
-          <div className="max-w-[420px] text-left">
-            <p className="font-[family-name:var(--font-inter)] text-[16px] font-[400] leading-[1.7] text-white/80">
-              Most technology projects fail because they solve the wrong
-              problem. A company implements new software, but the underlying
-              process remains broken. Data stays fragmented. Manual work
-              persists. The tool sits unused. An operational audit changes that
-              equation.
-            </p>
-          </div>
+          {description && descriptionPosition === "right" ? (
+            <div className="max-w-[420px] text-left">
+              <p className="font-[family-name:var(--font-inter)] text-[16px] font-[400] leading-[1.7] text-white/80">
+                {description}
+              </p>
+            </div>
+          ) : null}
         </div>
       </div>
 

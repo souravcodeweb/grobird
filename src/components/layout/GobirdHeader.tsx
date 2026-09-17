@@ -157,6 +157,10 @@ export function GobirdHeader() {
                     href={
                       item.title === "Operational Discovery"
                         ? "/services/operational-discovery"
+                        : item.title === "Custom Software"
+                        ? "/services/custom-software"
+                        : item.title === "Workflow Automation"
+                        ? "/services/workflow-automation"
                         : "#"
                     }
                     className="flex cursor-pointer items-start gap-3 rounded-none px-2 py-2 transition hover:bg-white/40"

@@ -8,10 +8,11 @@ export type NumberListItem = {
 
 interface NumberListProps {
   items: NumberListItem[];
-  heading?: string;
+  heading?: ReactNode;
   headingHighlight?: string;
   description?: ReactNode;
   className?: string;
+  showGlow?: boolean;
 }
 
 export function NumberList({
@@ -20,6 +21,7 @@ export function NumberList({
   headingHighlight,
   description,
   className = "",
+  showGlow = true,
 }: NumberListProps) {
   return (
     <section
@@ -30,12 +32,12 @@ export function NumberList({
         .filter(Boolean)
         .join(" ")}
     >
-      {/* RGB background glow */}
-      <div
-        className="pointer-events-none absolute inset-0 z-0"
-        aria-hidden="true"
-        style={{
-          background: `
+      {showGlow ? (
+        <div
+          className="pointer-events-none absolute inset-0 z-0"
+          aria-hidden="true"
+          style={{
+            background: `
             radial-gradient(
               ellipse 55% 50% at 10% 82%,
               rgba(82, 92, 255, 0.78) 0%,
@@ -56,14 +58,22 @@ export function NumberList({
               rgba(0, 0, 0, 0) 70%
             )
           `,
-        }}
-      />
+          }}
+        />
+      ) : null}
 
       <div className="relative z-10 mx-auto w-full">
         <h2 className="font-[family-name:var(--font-sora)] text-[52px] font-[400] leading-[1.08] tracking-[-0.06em]">
-          {headingHighlight && heading.endsWith(headingHighlight) ? (
+          {typeof heading === "string" &&
+          headingHighlight &&
+          heading.endsWith(headingHighlight) ? (
             <>
               {heading.slice(0, -headingHighlight.length)}
+              <span className="text-[#FF884C]">{headingHighlight}</span>
+            </>
+          ) : headingHighlight ? (
+            <>
+              {heading}{" "}
               <span className="text-[#FF884C]">{headingHighlight}</span>
             </>
           ) : (

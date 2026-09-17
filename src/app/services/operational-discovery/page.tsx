@@ -39,7 +39,12 @@ export default function OperationalDiscoveryPage() {
 
       <main>
         {/* Hero Section */}
-        <ServicesHero className="w-full min-h-[70vh]" />
+        <ServicesHero
+          className="w-full min-h-[70vh]"
+          primaryCta="Request an Operational Audit"
+          secondaryCta="Learn the process"
+          description="Most technology projects fail because they solve the wrong problem. A company implements new software, but the underlying process remains broken. Data stays fragmented. Manual work persists. The tool sits unused. An operational audit changes that equation."
+        />
 
         {/* Operational Discovery Intro Section */}
         <section className="flex h-[643px] w-full items-center justify-center bg-[#000000] px-[30px]">
