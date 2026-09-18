@@ -55,7 +55,6 @@ export default function HealthcarePage() {
         <IndustriesCenter />
 
         <InNumberUi
-          glowColor="orange"
           heading={
             <>
               <span className="text-[#5D5B5D]">How </span>
