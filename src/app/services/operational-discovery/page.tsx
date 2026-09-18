@@ -189,7 +189,25 @@ export default function OperationalDiscoveryPage() {
           </div>
         </section>
 
-        <SubFooter className="w-full " />
+        <SubFooter
+          className="w-full operational-subfooter"
+          titleLine1="Ready to understand where"
+          titleLine2="your operational"
+          titleHighlight=" friction lives?"
+          backgroundImage="/subbg1.png"
+          showRgbGlow={false}
+          fullBackgroundImage={false}
+          backgroundImageSide="right"
+          stretchBackgroundImage
+          backgroundImageAtBottom
+          description={
+            <>
+              Start your discovery today. We deliver a decision-ready roadmap in <br />
+              four weeks — no vendor bias, no guesswork.
+            </>
+          }
+          buttonText="Build Your BI Strategy"
+        />
       </main>
 
       <GobirdFooter />

@@ -557,17 +557,21 @@ export default function Home() {
             tool. We <br /> start with your problem. We understand that
             technology serves operations, not the reverse.
           </p>
+
           <article className="mt-16 grid w-full max-w-[1437.82px] grid-cols-1 overflow-hidden bg-black md:min-h-[409.53px] md:grid-cols-[718.91px_minmax(0,1fr)]">
-            <div className="relative min-h-[330px] overflow-hidden bg-[#d8c987] md:h-[409.53px] md:w-[718.91px]">
-              <Image
-                src="/herobgr.png"
-                alt=""
-                fill
-                className="object-contain opacity-35 mix-blend-multiply"
-              />
+            {/* LEFT IMAGE SECTION */}
+            <div className="relative min-h-[330px] overflow-hidden md:h-[409.53px] md:w-[718.91px]">
+              <Image src="/heroimg.png" alt="" fill className="object-cover" />
+
+              {/* Dark overlay */}
+              <div className="absolute inset-0 bg-black/35" />
+
+              {/* Grid */}
               <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(85,65,20,0.1)_1px,transparent_1px)] bg-[size:18px_18px]" />
+
+              {/* Orange Content Box */}
               <div className="absolute left-1/2 top-1/2 flex h-[246px] w-[548px] max-w-[calc(100%-32px)] -translate-x-1/2 -translate-y-1/2 items-center justify-center bg-[#FF884C] px-6 py-8 text-center">
-                <h3 className="font-[family-name:var(--font-sora)] text-[36px] font-[weight:400] leading-[1.15] text-[#000000]">
+                <h3 className="font-[family-name:var(--font-sora)] text-[36px] font-[400] leading-[1.15] text-[#000000]">
                   Why Hiring An Ops
                   <br />
                   Coordinator Rarely Fixes A
@@ -576,21 +580,25 @@ export default function Home() {
                 </h3>
               </div>
             </div>
+
+            {/* RIGHT CONTENT */}
             <div className="flex min-h-[330px] flex-col justify-between bg-[#010C1B] px-8 py-10 text-[#FFFFFF] md:min-h-[370px] md:px-8 md:py-11">
               <div>
-                <h3 className="max-w-[500px] font-[family-name:var(--font-sora)] text-[31px] font-[weight:400] leading-[1.15]">
+                <h3 className="max-w-[500px] font-[family-name:var(--font-sora)] text-[31px] font-[400] leading-[1.15]">
                   Why Hiring An Ops Coordinator
                   <br />
                   Rarely Fixes A Process Problem
                 </h3>
-                <time className="mt-5 block font-[family-name:var(--font-inter)] text-[10px] font-[weight:400] uppercase tracking-[0.04em] text-[#FFFFFF]">
+
+                <time className="mt-5 block font-[family-name:var(--font-inter)] text-[10px] font-[400] uppercase tracking-[0.04em] text-[#FFFFFF]">
                   August 17, 2026
                 </time>
               </div>
+
               <div className="-mx-8 w-[calc(100%+4rem)] border-t border-[#5A5A5A] px-8 pt-6">
                 <button
                   type="button"
-                  className="flex w-full items-center justify-between font-[family-name:var(--font-inter)] text-[15.4px] font-[weight:500] text-[#FFFFFF]"
+                  className="flex w-full items-center justify-between font-[family-name:var(--font-inter)] text-[15.4px] font-[500] text-[#FFFFFF]"
                 >
                   <span>Read More</span>
                   <FaArrowRightLong className="text-[14px]" />
@@ -598,6 +606,7 @@ export default function Home() {
               </div>
             </div>
           </article>
+
           <div className="mt-20 grid w-full max-w-[1437.82px] grid-cols-1 gap-x-6 gap-y-12 md:grid-cols-3">
             <article className="min-w-0 text-left text-[#FFFFFF] md:border-r md:border-[#5A5A5A] md:pr-6">
               <div className="relative aspect-[1.67] overflow-hidden bg-[#FF884C] p-[15px]">

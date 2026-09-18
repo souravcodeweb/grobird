@@ -1,3 +1,5 @@
+import React from "react";
+
 interface SubFooterProps {
   className?: string;
   titleLine1?: string;
@@ -8,6 +10,9 @@ interface SubFooterProps {
   buttonText?: string;
   showRgbGlow?: boolean;
   fullBackgroundImage?: boolean;
+  backgroundImageSide?: "left" | "right";
+  stretchBackgroundImage?: boolean;
+  backgroundImageAtBottom?: boolean;
 }
 
 export function SubFooter({
@@ -25,6 +30,9 @@ export function SubFooter({
   buttonText = "Request an Operational Audit",
   showRgbGlow = true,
   fullBackgroundImage = false,
+  backgroundImageSide = "right",
+  stretchBackgroundImage = false,
+  backgroundImageAtBottom = false,
 }: SubFooterProps) {
   return (
     <section
@@ -37,18 +45,22 @@ export function SubFooter({
         .join(" ")}
     >
       {/* ============================================ */}
-      {/* RIGHT SIDE BACKGROUND IMAGE */}
+      {/* BACKGROUND IMAGE */}
       {/* ============================================ */}
 
       <div
         className={`pointer-events-none absolute ${
           fullBackgroundImage
             ? "inset-0 h-full w-full"
-            : "right-0 -top-[80px] h-[calc(100%+80px)] w-[55%]"
-        }`}
+            : `${backgroundImageSide === "left" ? "left-0" : "right-0"} ${
+                backgroundImageAtBottom
+                  ? "top-[80px] h-[calc(100%-80px)]"
+                  : "-top-[80px] h-[calc(100%+80px)]"
+              } w-[55%]`
+        } operational-subfooter-image`}
         style={{
           backgroundImage: `url("${backgroundImage}")`,
-          backgroundSize: "cover",
+          backgroundSize: stretchBackgroundImage ? "100% 100%" : "cover",
           backgroundPosition: fullBackgroundImage
             ? "center -48px"
             : "center top",
@@ -79,15 +91,15 @@ export function SubFooter({
           className="pointer-events-none absolute bottom-[-210px] left-1/2 z-[2] h-[480px] w-[1200px] -translate-x-1/2 rounded-full blur-[90px]"
           style={{
             background: `
-            radial-gradient(
-              ellipse at center,
-              rgba(0, 102, 255, 0.60) 0%,
-              rgba(0, 102, 255, 0.38) 25%,
-              rgba(0, 102, 255, 0.18) 45%,
-              rgba(0, 102, 255, 0.06) 62%,
-              rgba(0, 102, 255, 0) 78%
-            )
-          `,
+              radial-gradient(
+                ellipse at center,
+                rgba(0, 102, 255, 0.60) 0%,
+                rgba(0, 102, 255, 0.38) 25%,
+                rgba(0, 102, 255, 0.18) 45%,
+                rgba(0, 102, 255, 0.06) 62%,
+                rgba(0, 102, 255, 0) 78%
+              )
+            `,
           }}
         />
       )}
@@ -101,14 +113,14 @@ export function SubFooter({
           className="pointer-events-none absolute bottom-0 left-0 right-0 z-[2] h-[220px]"
           style={{
             background: `
-            linear-gradient(
-              to top,
-              rgba(0, 102, 255, 0.20) 0%,
-              rgba(0, 102, 255, 0.10) 30%,
-              rgba(0, 102, 255, 0.03) 65%,
-              rgba(0, 102, 255, 0) 100%
-            )
-          `,
+              linear-gradient(
+                to top,
+                rgba(0, 102, 255, 0.20) 0%,
+                rgba(0, 102, 255, 0.10) 30%,
+                rgba(0, 102, 255, 0.03) 65%,
+                rgba(0, 102, 255, 0) 100%
+              )
+            `,
           }}
         />
       )}
