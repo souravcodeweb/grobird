@@ -2,9 +2,38 @@
 
 import Image from "next/image";
 import { useRef, useState } from "react";
+import { FiBox, FiFlag, FiHeart, FiPieChart, FiTruck } from "react-icons/fi";
 import { IoIosArrowUp } from "react-icons/io";
 
 const navItems = ["Industries", "Partners", "About Us", "Blogs"];
+
+const industryItems = [
+  {
+    title: "Fintech",
+    description: "Build clearer, more resilient financial operations.",
+    icon: <FiPieChart className="h-[22px] w-[22px]" />,
+  },
+  {
+    title: "Logistics",
+    description: "Connect workflows, systems, and decisions across the chain.",
+    icon: <FiTruck className="h-[22px] w-[22px]" />,
+  },
+  {
+    title: "Healthcare",
+    description: "Improve visibility and efficiency across care operations.",
+    icon: <FiHeart className="h-[22px] w-[22px]" />,
+  },
+  {
+    title: "Lending",
+    description: "Streamline decisions, data, and borrower experiences.",
+    icon: <FiFlag className="h-[22px] w-[22px]" />,
+  },
+  {
+    title: "Manufacturing",
+    description: "Make production data more connected and actionable.",
+    icon: <FiBox className="h-[22px] w-[22px]" />,
+  },
+];
 
 const serviceItems = [
   {
@@ -90,6 +119,7 @@ const serviceItems = [
 export function GobirdHeader() {
   const closeTimeout = useRef<number | null>(null);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
 
   const clearCloseTimer = () => {
     if (closeTimeout.current) {
@@ -107,6 +137,18 @@ export function GobirdHeader() {
     clearCloseTimer();
     closeTimeout.current = window.setTimeout(() => {
       setIsServicesOpen(false);
+    }, 300);
+  };
+
+  const handleIndustriesOpen = () => {
+    clearCloseTimer();
+    setIsIndustriesOpen(true);
+  };
+
+  const handleIndustriesClose = () => {
+    clearCloseTimer();
+    closeTimeout.current = window.setTimeout(() => {
+      setIsIndustriesOpen(false);
     }, 300);
   };
 
@@ -163,6 +205,10 @@ export function GobirdHeader() {
                         ? "/services/workflow-automation"
                         : item.title === "System Integration"
                         ? "/services/system-integration"
+                        : item.title === "Business Intelligence"
+                        ? "/services/business-intelligence"
+                        : item.title === "Managed Services"
+                        ? "/services/managed-services"
                         : "#"
                     }
                     className="flex cursor-pointer items-start gap-3 rounded-none px-2 py-2 transition hover:bg-white/40"
@@ -185,15 +231,77 @@ export function GobirdHeader() {
             </div>
           </div>
 
-          {navItems.map((item) => (
-            <a
-              key={item}
-              href="#"
-              className="inline-flex items-center gap-1 whitespace-nowrap align-middle transition hover:text-black/70"
-            >
-              <span className="leading-none">{item}</span>
-            </a>
-          ))}
+          {navItems.map((item) =>
+            item === "Industries" ? (
+              <div
+                key={item}
+                className="relative"
+                onMouseEnter={handleIndustriesOpen}
+                onMouseLeave={handleIndustriesClose}
+                onFocus={handleIndustriesOpen}
+                onBlur={handleIndustriesClose}
+              >
+                <button
+                  type="button"
+                  className="inline-flex cursor-pointer items-center gap-1 whitespace-nowrap align-middle transition hover:text-black/70"
+                  aria-expanded={isIndustriesOpen}
+                >
+                  <span className="leading-none">Industries</span>
+                  <IoIosArrowUp className="inline-block h-4 w-4 rotate-180 text-current" />
+                </button>
+
+                <div
+                  className={`absolute left-0 top-[calc(100%+10px)] w-[360px] origin-top rounded-t-none rounded-b-[20px] border border-[#eee8e4] bg-[#f5f4f2] p-3 shadow-[0_16px_30px_rgba(16,24,40,0.08)] transition-all duration-500 ease-out ${
+                    isIndustriesOpen
+                      ? "pointer-events-auto scale-100 opacity-100"
+                      : "pointer-events-none scale-95 opacity-0"
+                  }`}
+                >
+                  <div className="space-y-1">
+                    {industryItems.map((industry) => (
+                      <a
+                        key={industry.title}
+                        href={
+                          industry.title === "Fintech"
+                            ? "/industries/fintech"
+                            : industry.title === "Logistics"
+                            ? "/industries/logistics"
+                            : industry.title === "Healthcare"
+                            ? "/industries/healthcare"
+                            : industry.title === "Lending"
+                            ? "/industries/lending"
+                            : industry.title === "Manufacturing"
+                            ? "/industries/manufacturing"
+                            : "#"
+                        }
+                        className="flex cursor-pointer items-start gap-3 rounded-none px-2 py-2 transition hover:bg-white/40"
+                      >
+                        <div className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full bg-[#F9F8FF] text-[#f0732c]">
+                          {industry.icon}
+                        </div>
+                        <div className="min-w-0 flex-1">
+                          <h3 className="text-[16px] font-semibold leading-[1.3] tracking-[-0.02em] text-[#000000]">
+                            {industry.title}
+                          </h3>
+                          <p className="mt-1 text-[14px] leading-[1.4] text-[#6F6C90]">
+                            {industry.description}
+                          </p>
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <a
+                key={item}
+                href="#"
+                className="inline-flex items-center gap-1 whitespace-nowrap align-middle transition hover:text-black/70"
+              >
+                <span className="leading-none">{item}</span>
+              </a>
+            )
+          )}
         </nav>
 
         <div className="flex flex-1 items-center justify-end">

@@ -63,7 +63,7 @@ export default function CustomSoftwarePage() {
               When Custom Software <br />
             </>
           }
-          headingHighlight="Operational Audit?"
+          headingHighlight="Makes Sense"
           items={operationalDiscoverySteps}
         />
 
